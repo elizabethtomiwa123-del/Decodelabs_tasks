@@ -19,3 +19,21 @@ SELECT
         NULLIF(SUM(TotalPrice), 0) * 100, 2
     ) AS loss_percentage
 FROM sales_data_3;
+
+
+SELECT 
+    ReferralSource, 
+    COUNT(DISTINCT CustomerID) AS Unique_Customers
+FROM sales_data_3
+GROUP BY ReferralSource
+ORDER BY Unique_Customers DESC;
+
+
+SELECT
+  OrderStatus,
+  COUNT(OrderID) AS Number_of_orders,
+  ROUND(100.0 * COUNT(OrderID) / (SELECT COUNT(OrderID) FROM sales_data_3), 2) AS Percentage
+FROM 
+  sales_data_3
+GROUP BY OrderStatus
+ORDER BY Number_of_orders DESC;
