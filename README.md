@@ -22,7 +22,10 @@ In this week, I conducted a deep-dive EDA on the e-commerce sales dataset to unc
 
 ### 💡 Strategic Insight
 Pivot to Retention: Data reveals a clear retention bottleneck. To drive sustainable growth, we must shift strategy from high-cost acquisition toward loyalty-driven outreach, focusing on converting existing customers into repeat buyers.
-# Week 3: SQL Data Analysis
+
+---
+
+## Week 3: SQL Data Analysis
 
 ## Overview
 This project involves querying the sales_data_3 database to extract key business metrics and perform data aggregation to support strategic decision-making.
@@ -67,8 +70,9 @@ FROM
 GROUP BY OrderStatus
 ORDER BY Number_of_orders DESC;
 
+---
 
-## Week 4 Data visualization
+## Week 4: Data visualization
 Business Goal: Identify trends and patterns,uncover operational Inefficiences,monitor key performance indicators
 
 ### 1.Dashboard Insights: Revenue Realization Gap Analysis (2023 - Mid 2025)
