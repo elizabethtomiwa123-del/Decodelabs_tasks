@@ -22,3 +22,13 @@ In this week, I conducted a deep-dive EDA on the e-commerce sales dataset to unc
 
 ### 💡 Strategic Insight
 Pivot to Retention: Data reveals a clear retention bottleneck. To drive sustainable growth, we must shift strategy from high-cost acquisition toward loyalty-driven outreach, focusing on converting existing customers into repeat buyers.
+
+
+SELECT
+  OrderStatus,
+  COUNT(OrderID) AS Number_of_orders,
+  ROUND(100.0 * COUNT(OrderID) / (SELECT COUNT(OrderID) FROM sales_data_3), 2) AS Percentage
+FROM 
+  sales_data_3
+GROUP BY OrderStatus
+ORDER BY Number_of_orders DESC;
