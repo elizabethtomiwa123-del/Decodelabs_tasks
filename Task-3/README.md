@@ -1,9 +1,9 @@
 # Task 3: SQL Data Analysis
 
 ## Overview
-This project focuses on querying the sales_data_3 database to extract key business metrics and perform data aggregation to support strategic decision-making.
+This project involves querying the sales_data_3 database to extract key business metrics and perform data aggregation to support strategic decision-making.
 
-## SQL Query Implementation
+## SQL Queries
 
 ### 1. Revenue Performance Analysis
 Business Goal: Financial breakdown of revenue by segmenting data based on order status (Delivered, Lost/Pipeline).
@@ -20,6 +20,8 @@ SELECT
     ) AS loss_percentage
 FROM sales_data_3;
 
+ ### 2. Customer Acquisition by Referral Source
+Business Goal: Identify effective marketing channels by analyzing the number of unique customers acquired through each referral source.
 
 SELECT 
     ReferralSource, 
@@ -28,6 +30,9 @@ FROM sales_data_3
 GROUP BY ReferralSource
 ORDER BY Unique_Customers DESC;
 
+
+### 3. Order Status Distribution
+Business Goal: Assess operational workflow health by determining the percentage of total orders in each status category.
 
 SELECT
   OrderStatus,
